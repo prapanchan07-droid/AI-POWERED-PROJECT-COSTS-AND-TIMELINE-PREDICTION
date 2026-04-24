@@ -9,7 +9,6 @@ for _ in range(2000):
     tools = random.randint(1, 10)
     complexity = random.randint(1, 3)  # 1=Low, 2=Medium, 3=High
 
-    # 🎯 COST FORMULA (logical)
     cost = (
         budget * 0.6 +
         team * 20000 +
@@ -17,7 +16,6 @@ for _ in range(2000):
         complexity * 100000
     )
 
-    # 🎯 TIME FORMULA (logical)
     time = (
         500 +
         complexity * 150 -
@@ -25,7 +23,7 @@ for _ in range(2000):
         tools * 10
     )
 
-    # Ensure time positive
+
     time = max(30, int(time))
 
     data.append([team, budget, tools, complexity, int(cost), int(time)])
